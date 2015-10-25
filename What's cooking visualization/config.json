@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "text": "Tomasz Grel",
+    "file": "",
+    "link": ""
+  },
+  "text": {
+    "title": "Graph of relationships between ingredients",
+    "more": "This graph was produced with following steps:\n\n1. A bipartite graph of recipes and ingredients was created. A connection between a recipe and an ingredient was established if the ingredient was used in the recipe.\n2. Weighted projection was performed in order to produce a graph of dependencies between the ingredients.\n3. On this graph a community discovering technique known as Louvain method was applied.\n4. The graph was then loaded to Gephi.\n5. In Gephi the OpenOrd algorithm was used to produce a layout for the nodes.\n6. Lastly the results was exported to the Sigma.js format in order to produce this visualization.\n\nEnjoy!\n\n\n\n",
+    "intro": "Author: Tomasz Grel (tomasz.grel@gmail.com)"
+  },
+  "legend": {
+    "edgeLabel": "Number of common recipes between two ingredients",
+    "colorLabel": "Community partition assigned by the Louvain algorithm",
+    "nodeLabel": "Ingredient"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "community",
+    "hoverBehavior": "default"
+  },
+  "informationPanel": {
+    "imageAttribute": false,
+    "groupByEdgeDirection": false
+  },
+  "sigma": {
+    "graphProperties": {
+      "minEdgeSize": 0.2,
+      "maxNodeSize": 7,
+      "maxEdgeSize": 0.5,
+      "minNodeSize": 1
+    },
+    "drawingProperties": {
+      "labelThreshold": 10,
+      "hoverFontStyle": "bold",
+      "defaultEdgeType": "curve",
+      "defaultLabelColor": "#000",
+      "defaultLabelHoverColor": "#fff",
+      "defaultLabelSize": 14,
+      "activeFontStyle": "bold",
+      "fontStyle": "bold",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd"
+    },
+    "mouseProperties": {
+      "minRatio": 0.75,
+      "maxRatio": 20
+    }
+  }
+}
